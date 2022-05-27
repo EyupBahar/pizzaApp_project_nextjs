@@ -3,7 +3,10 @@ import { useRouter } from "next/router";
 import classes from "./MeetupItem.module.css";
 
 function MeetupItem(props) {
-  function showDetailsHandler() {}
+  const router = useRouter();
+  function showDetailsHandler() {
+    router.push("/" + props.id);
+  }
   return (
     <li className={classes.item}>
       <Card>
